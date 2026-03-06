@@ -1,29 +1,30 @@
-# RedditPulse: Community-Driven Need Analysis Engine
+# RedditPulse: Community-Driven Requirement Analytics Engine
 
-RedditPulse is an open-source research tool designed to identify recurring pain points and software gaps within specialized Reddit communities. By analyzing user discussions, it helps developers build tools that people actually need.
+RedditPulse is a high-performance analytical tool designed to identify recurring technical pain points and software gaps within specialized Reddit communities. By leveraging Natural Language Processing (NLP), it transforms raw community discussions into actionable insights for developers.
 
-## 🚀 Overview
+## 🚀 Mission
+The goal of this project is to build software that people actually need. We scan niche subreddits to find "cries for help" and "feature gaps," ensuring the next generation of open-source tools is built on real-world demand rather than assumptions.
 
-Many great software ideas are hidden in daily Reddit conversations ("I wish there was an app for...", "How do I solve..."). RedditPulse automates the process of finding these "cries for help" by scanning specific subreddits and categorizing user feedback.
+## ✨ Core Architecture
+- **Passive Monitoring:** Operates in a strict **Read-Only** mode. No automated posting, DMing, or user interaction.
+- **Heuristic Analysis:** Uses specialized pattern matching and NLP to distinguish between general chatter and specific software requirements.
+- **Cross-Subreddit Aggregation:** Correlates needs across multiple technical domains to identify universal friction points.
 
-## ✨ Key Features
+## 🛠️ Tech Stack
+- **Engine:** Python 3.10+
+- **Reddit Integration:** [PRAW](https://praw.readthedocs.io/) (Python Reddit API Wrapper)
+- **Data Science:** SpaCy (NLP), Pandas (Data Aggregation)
+- **Security:** Environment-based credential management (fully compliant with Reddit's Responsible Builder Policy).
 
-- **Multi-Subreddit Monitoring:** Tracks multiple niche communities simultaneously.
-- **NLP Filtering:** Uses Natural Language Processing to distinguish between general chatter and specific feature requests or complaints.
-- **Trend Detection:** Identifies if a particular problem is being mentioned more frequently over time.
-- **Non-Intrusive:** Operates in a read-only mode to respect community guidelines and privacy.
+## 📊 Why Not Devvit?
+RedditPulse requires capabilities that fall outside the current scope of the Reddit Developer Platform (Devvit):
+1. **Cross-Subreddit Scope:** Devvit is primarily optimized for single-subreddit interactive components. Our engine requires global cross-community data aggregation.
+2. **Computational Load:** The NLP clustering and large-scale text mining algorithms require dedicated CPU/Memory resources that exceed Devvit's sandboxed execution limits.
+3. **External Persistence:** Analysis requires integration with external analytical databases for long-term trend tracking.
 
-## 🛠️ Tech Stack (Planned)
-
-- **Language:** Python 3.10+
-- **API Wrapper:** [PRAW](https://praw.readthedocs.io/) (Python Reddit API Wrapper)
-- **Data Analysis:** Pandas, Scikit-learn / SpaCy (for NLP)
-- **Database:** SQLite (for local trend tracking)
-
-## 📊 Why not Devvit?
-
-This project requires **cross-subreddit data aggregation** and **intensive local NLP processing** that exceeds the current resource limits and scoped environment of Reddit's Devvit platform. It is designed as an external analytical engine rather than an in-app interactive component.
+## ⚖️ Compliance & Privacy
+- **Responsible Builder:** This project strictly adheres to the [Reddit Responsible Builder Policy](https://support.reddithelp.com/hc/en-us/articles/42728983564564-Responsible-Builder-Policy).
+- **Data Privacy:** No Personally Identifiable Information (PII) is collected or stored. We focus on aggregate "needs" rather than individual user data.
 
 ## 📝 License
-
-MIT License - feel free to use it for your own research!
+MIT License - Created by [Much-Relationship-58](https://www.reddit.com/user/Much-Relationship-58/)
